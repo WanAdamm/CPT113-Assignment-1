@@ -7,7 +7,10 @@ class Cookies{
         float price, weight;
 
     public:
-
+        Cookies();
+        Cookies(float, float);
+        float getPrice();
+        float getWeight();
 };
 
 #endif 

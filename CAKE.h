@@ -7,7 +7,10 @@ class Cake{
         float price, weight;
 
     public:
-
+        Cake();
+        Cake(float, float);
+        float getPrice();
+        float getWeight();
 };
 
 #endif
