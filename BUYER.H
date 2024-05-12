@@ -9,6 +9,7 @@ class Buyer : public Account {
     public:
         Buyer();
         Buyer(float);
+        Buyer(float, string, int);
         float getCredit();
         void addCredit(float);
         void withdrawCredit(float);
