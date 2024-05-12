@@ -21,6 +21,11 @@ void Seller::printSellerInfo()
          << "Unit Available: " << inventory.getUnitAvailable() << endl;
 }
 
+Seller::Seller(float rev, int uA, string n, int t): Account(n, t){
+    revenue = rev;
+    inventory.setInventory(0, uA);
+}
+
 float Seller::getRevenue()
 {
     return revenue;

@@ -11,6 +11,7 @@ class Account{
     public:
         Account();
         Account(string, int);
+        void printAccountInfo();
         string getName();
         void setName(string);
         int getType();
