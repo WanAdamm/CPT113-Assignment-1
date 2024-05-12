@@ -9,6 +9,12 @@ class Account{
         string name;
         int type;
     public:
+        Account();
+        Account(string, int);
+        string getName();
+        void setName();
+        int getType();
+        void setType();
 };
 
 #endif

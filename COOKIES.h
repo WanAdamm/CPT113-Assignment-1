@@ -5,6 +5,7 @@ class Cookies{
 
     private:
         float price, weight;
+        int count;
 
     public:
         Cookies();

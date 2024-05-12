@@ -5,6 +5,7 @@ class Cake{
 
     private:
         float price, weight;
+        int count;
 
     public:
         Cake();

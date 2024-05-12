@@ -3,7 +3,14 @@
 
 class Inventory{
     private:
+        int unitSold, unitAvailable;
     public:
+        Inventory();
+        Inventory(int, int);
+        int getUnitSold();
+        int setUnitSold();
+        int getUnitAvailable();
+        int setUnitAvailable();
 };
 
 #endif
