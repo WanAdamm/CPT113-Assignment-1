@@ -1,17 +1,12 @@
 #ifndef CAKE_H
 #define CAKE_H
 
-class Cake{
+#include "PRODUCT.h"
+
+class Cake : public Product{
 
     private:
-        float price, weight;
-        int count;
-
     public:
-        Cake();
-        Cake(float, float);
-        float getPrice();
-        float getWeight();
 };
 
 #endif
