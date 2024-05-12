@@ -7,6 +7,7 @@ class Inventory{
     public:
         Inventory();
         Inventory(int, int);
+        void setInventory(int,int);
         int getUnitSold();
         int getUnitAvailable();
         void setUnitSold(int);

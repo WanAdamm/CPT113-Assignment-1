@@ -14,6 +14,12 @@ Inventory::Inventory(int uS, int uA)
     unitAvailable = uA;
 }
 
+void Inventory::setInventory(int uS, int uA)
+{
+    unitSold = uS;
+    unitAvailable = uA;
+}
+
 int Inventory::getUnitSold()
 {
     return unitSold;

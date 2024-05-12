@@ -36,4 +36,12 @@ void Product::setWeight(float w)
     weight = w;
 }
 
+int Product::getAvailableCount()
+{
+    return availableCount;
+}
 
+void Product::setAvailableCount(int aC)
+{
+    availableCount = aC;
+}

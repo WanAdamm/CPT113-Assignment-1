@@ -4,7 +4,6 @@
 #include "PRODUCT.h"
 
 class Cookies : public Product{
-
     private:
     public:
 };

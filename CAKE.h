@@ -4,7 +4,6 @@
 #include "PRODUCT.h"
 
 class Cake : public Product{
-
     private:
     public:
 };
