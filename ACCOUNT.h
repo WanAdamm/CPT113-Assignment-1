@@ -7,14 +7,14 @@ using namespace std;
 class Account{
     private:
         string name;
-        int type;
+        int type; // 0 default 1 buyer 2 seller, 0 cant have access to anything
     public:
         Account();
         Account(string, int);
         string getName();
-        void setName();
+        void setName(string);
         int getType();
-        void setType();
+        void setType(int);
 };
 
 #endif

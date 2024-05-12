@@ -10,7 +10,8 @@ class Buyer : public Account {
         Buyer();
         Buyer(float);
         float getCredit();
-        void setCredit(float);
+        void addCredit(float);
+        void withdrawCredit(float);
 };
 
 #endif

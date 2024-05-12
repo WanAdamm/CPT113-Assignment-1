@@ -9,7 +9,11 @@ class Seller: public Account {
         float revenue;
         Inventory inventory;
     public:
-
+        Seller();
+        Seller(float, int); // int to initialize units available
+        float getRevenue();
+        void setRevenue(float);
+        
 };
 
 #endif
