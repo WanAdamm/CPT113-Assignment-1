@@ -7,6 +7,9 @@ class Cake : public Product{
     private:
         static int cakeCount;
     public:
+        Cake();
+        ~Cake();
+        int getCakeCount();
 };
 
 #endif

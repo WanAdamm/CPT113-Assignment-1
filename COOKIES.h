@@ -7,6 +7,9 @@ class Cookies : public Product{
     private:
         static int cookieCount;
     public:
+        Cookies();
+        ~Cookies();
+        int getCookieCount();
 };
 
 #endif 
