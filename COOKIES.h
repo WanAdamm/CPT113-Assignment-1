@@ -5,6 +5,7 @@
 
 class Cookies : public Product{
     private:
+        static int cookieCount;
     public:
 };
 
