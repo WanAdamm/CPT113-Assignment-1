@@ -14,7 +14,11 @@ class Shop{
         Buyer buyer;
         Seller seller;
     public:
-        
+        Shop();
+        ~Shop();
+        void showMenu();
+        void buyItem();
+        void sellItem();
 };
 
 #endif

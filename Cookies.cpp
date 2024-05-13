@@ -9,6 +9,11 @@ Cookies::Cookies()
     cookieCount++;
 }
 
+Cookies::Cookies(string n, float p, float w, int aC):Product(n,p,w,aC)
+{
+    cookieCount++;
+}
+
 Cookies::~Cookies()
 {
     cookieCount--;

@@ -8,8 +8,9 @@ class Cookies : public Product{
         static int cookieCount;
     public:
         Cookies();
+        Cookies(string,float,float,int);
         ~Cookies();
         int getCookieCount();
 };
 
-#endif 
+#endif

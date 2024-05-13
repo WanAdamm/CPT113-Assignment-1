@@ -9,6 +9,11 @@ Cake::Cake()
     cakeCount++;
 }
 
+Cake::Cake(string n, float p, float w, int aC):Product(n,p,w,aC)
+{
+    cakeCount++;
+}
+
 Cake::~Cake()
 {
     cakeCount--;

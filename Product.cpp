@@ -4,16 +4,25 @@ using namespace std;
 
 Product::Product()
 {
+    itemName = "NO NAME";
     price = 0;
     weight = 0;
     availableCount = 0;
 }
 
-Product::Product(float p, float w, int aC)
+Product::Product(string n, float p, float w, int aC)
 {
+    itemName = n;
     price = p;
     weight = w;
     availableCount = aC;
+}
+
+void Product::getProductInfo()
+{
+    cout << "Item: " << itemName
+         << "Price: " << price
+         << "Weight: " << weight << endl;
 }
 
 float Product::getPrice()
