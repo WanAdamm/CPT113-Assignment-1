@@ -4,8 +4,7 @@ using namespace std;
 
 Shop::Shop()
 {
-    inventory.setInventory(0,0);
-    
+    inventory.setInventory(0,0); //set unitAvailable and unitSold to 0
 }
 
 Shop::~Shop()
