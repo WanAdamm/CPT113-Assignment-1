@@ -4,12 +4,11 @@
 class Product{
 
     private:
-        string itemName;
         float price, weight;
         int availableCount;
     public:
         Product();
-        Product(string, float, float, int);
+        Product(float, float, int);
         void getProductInfo();
         float getPrice();
         void setPrice(float);

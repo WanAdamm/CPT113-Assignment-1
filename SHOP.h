@@ -9,8 +9,6 @@
 class Shop{
     private:
         Inventory inventory;
-        Cake cake[3];
-        Cookies cookies[3];
         Buyer buyer{100, "Wan", 1};
         Seller seller{0, 100, "Tou", 2};
     public:

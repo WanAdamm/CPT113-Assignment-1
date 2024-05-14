@@ -1,9 +1,12 @@
 #ifndef INVENTORY_H
 #define INVENTORY_H
-
+#include "CAKE.h"
+#include "COOKIES.h"
 class Inventory{
     private:
         int unitSold, unitAvailable;
+        Cake cakes;
+        Cookies cookies;
     public:
         Inventory();
         Inventory(int, int);

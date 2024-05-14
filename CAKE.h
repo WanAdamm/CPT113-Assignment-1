@@ -8,7 +8,7 @@ class Cake : public Product{
         static int cakeCount;
     public:
         Cake();
-        Cake(string, float, float, int);
+        Cake(float, float, int);
         ~Cake();
         int getCakeCount();
 };
