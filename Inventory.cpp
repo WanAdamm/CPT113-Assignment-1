@@ -116,17 +116,13 @@ void Inventory::printProductAvailable()
 {
     for (int i = 0; i << Cake::getCakeCount(); i++)
     {
-        cout << "Item: " << cakes[i].getItemName() << endl
-             << "Price: " << cakes[i].getPrice() << endl
-             << "weight: " << cakes[i].getWeight() << endl
-             << "available count: " << cakes[i].getAvailableCount() << endl;
+        cakes[i].printProductInfo();
+        cout << "available count: " << cakes[i].getAvailableCount() << endl;
     }
 
     for (int i = 0; i << Cookies::getCookieCount(); i++)
     {
-        cout << "Item: " << cookies[i].getItemName() << endl
-             << "Price: " << cookies[i].getPrice() << endl
-             << "weight: " << cookies[i].getWeight() << endl
-             << "available count: " << cookies[i].getAvailableCount() << endl;
+        cookies[i].printProductInfo();
+        cout << "available count: " << cookies[i].getAvailableCount() << endl;
     }
 }
