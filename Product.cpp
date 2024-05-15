@@ -19,8 +19,8 @@ Product::Product(float p, float w, int aC)
 void Product::printProductInfo()
 {
     cout << "Item: " << itemName << " "
-         << "Price: " << price << " "
-         << "Weight: " << weight << endl;
+         << "Price(RM): " << price << " "
+         << "Weight(g): " << weight << endl;
 }
 
 string Product::getItemName()
