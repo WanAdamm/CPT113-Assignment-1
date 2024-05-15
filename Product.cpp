@@ -16,10 +16,21 @@ Product::Product(float p, float w, int aC)
     availableCount = aC;
 }
 
-void Product::getProductInfo()
+void Product::printProductInfo()
 {
-    cout << "Price: " << price
+    cout << "Item: " << itemName << " "
+         << "Price: " << price << " "
          << "Weight: " << weight << endl;
+}
+
+string Product::getItemName()
+{
+  return itemName;
+}
+
+void Product::setItemName(string n)
+{
+  itemName = n;
 }
 
 float Product::getPrice()
