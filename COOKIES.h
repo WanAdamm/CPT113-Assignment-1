@@ -10,7 +10,7 @@ class Cookies : public Product{
         Cookies();
         Cookies(float,float,int);
         ~Cookies();
-        int getCookieCount();
+        static int getCookieCount();
 };
 
 #endif

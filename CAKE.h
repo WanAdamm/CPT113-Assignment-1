@@ -10,7 +10,7 @@ class Cake : public Product{
         Cake();
         Cake(float, float, int);
         ~Cake();
-        int getCakeCount();
+        static int getCakeCount();
 };
 
 #endif

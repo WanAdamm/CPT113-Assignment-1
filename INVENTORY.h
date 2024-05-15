@@ -5,11 +5,10 @@
 class Inventory{
     private:
         int unitSold, unitAvailable;
-        Cake cakes;
-        Cookies cookies;
+        Cake cakes[5];
+        Cookies cookies[5];
     public:
         Inventory();
-        Inventory(int, int);
         void setInventory(int,int);
         int getUnitSold();
         int getUnitAvailable();
@@ -19,6 +18,7 @@ class Inventory{
         void subUnitSold(int);
         void addUnitAvailable(int);
         void subUnitAvailable(int);
+        void printProductAvailable();
 };
 
 #endif
