@@ -16,7 +16,6 @@ class Product{
         void setWeight(float);
         int getAvailableCount(); // would be use to update inventory
         void setAvailableCount(int);
-
 };
 
 #endif 

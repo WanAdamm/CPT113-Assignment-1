@@ -6,6 +6,8 @@ class Buyer : public Account {
 
     private:
         float credit;
+        int cakeCount;
+        int cookieCount;
     public:
         Buyer();
         Buyer(float);
