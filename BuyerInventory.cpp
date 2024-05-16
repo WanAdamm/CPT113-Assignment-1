@@ -60,7 +60,7 @@ void BuyerInventory::printItemAvailable()
 
     for (int i = 0; i < 5; i++)
     {
-        cookies[i].printProductInfo();
+        cout << cakes[i].getItemName() << " ";
         cout << "available count: " << cookies[i].getAvailableCount() << endl;
     }
 }
