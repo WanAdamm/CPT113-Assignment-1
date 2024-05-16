@@ -18,10 +18,11 @@ class Seller: public Account {
         void addRevenue(float);
         void subRevenue(float);
         void addUnitSold(int);
-        void subUnitSold(int);
         void addUnitAvailable(int);
         void subUnitAvailable(int);
         void printItemAvailable();
+        void sellItem(int, int);
+        float getItemPrice(int);
 };
 
 #endif

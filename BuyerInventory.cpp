@@ -52,15 +52,27 @@ BuyerInventory::BuyerInventory()
 
 void BuyerInventory::printItemAvailable()
 {
-    for (int i = 0; i << Cake::getCakeCount(); i++)
+    for (int i = 0; i < 5; i++)
     {
         cakes[i].printProductInfo();
         cout << "available count: " << cakes[i].getAvailableCount() << endl;
     }
 
-    for (int i = 0; i << Cookies::getCookieCount(); i++)
+    for (int i = 0; i < 5; i++)
     {
         cookies[i].printProductInfo();
         cout << "available count: " << cookies[i].getAvailableCount() << endl;
+    }
+}
+
+void BuyerInventory::addItem(int id, int count)
+{
+    if(id >= 5)
+    {
+        cookies[id-5].addAvailableCount(count);
+    }
+    else if(id >= 0 && id < 5)
+    {
+        cakes[id].addAvailableCount(count);
     }
 }

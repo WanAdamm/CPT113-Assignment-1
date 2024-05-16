@@ -2,11 +2,15 @@
 #include <iostream>
 using namespace std;
 
+int Product::productCount = 0;
+
 Product::Product()
 {
     price = 0;
     weight = 0;
     availableCount = 0;
+    productID = getProductCount(); // will only call this function once thus it will not be refresehd
+    productCount++;
 }
 
 Product::Product(float p, float w, int aC)
@@ -14,13 +18,21 @@ Product::Product(float p, float w, int aC)
     price = p;
     weight = w;
     availableCount = aC;
+    productID = getProductCount();
+    productCount++;
 }
 
 void Product::printProductInfo()
 {
     cout << "Item: " << itemName << " "
          << "Price(RM): " << price << " "
-         << "Weight(g): " << weight << endl;
+         << "Weight(g): " << weight << " "
+         << "ID: " << productID << endl;
+}
+
+int Product::getProductID()
+{
+    return productID;
 }
 
 string Product::getItemName()
@@ -61,4 +73,14 @@ int Product::getAvailableCount()
 void Product::setAvailableCount(int aC)
 {
     availableCount = aC;
+}
+
+void Product::subAvailableCount(int count)
+{
+    availableCount -= count;
+}
+
+void Product::addAvailableCount(int count)
+{
+    availableCount += count;
 }

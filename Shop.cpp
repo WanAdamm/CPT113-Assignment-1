@@ -24,16 +24,29 @@ Shop::Shop(string bName, string sName, float cred)
 
 void Shop::printMenu()
 {
-    cout << "| Welcome |" << endl;
+    cout << "| Welcome " << buyer.getName() << " |"<< endl;
     seller.printItemAvailable();
 }
 
-void Shop::buyItem()
+void Shop::printSellerInfo()
 {
-    
+    seller.printAccountInfo();
 }
 
-void Shop::sellItem()
+void Shop::buyItem(int id, int count)
 {
+    seller.sellItem(id, count);
+    float price = seller.getItemPrice(id);
+    buyer.buyItem(id, count, price);
+}
 
+void Shop::printBuyerCredit()
+{
+    cout << buyer.getCredit() << endl;
+}
+
+void Shop::addBuyerCredit(float cred)
+{
+    buyer.addCredit(cred);
+    cout << "you've added RM" << cred << " to your account" << endl; 
 }

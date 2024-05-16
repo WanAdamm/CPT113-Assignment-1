@@ -4,24 +4,35 @@
 #include <string>
 using namespace std;
 
-class Product{
+class Product
+{
 
-    private:
-        string itemName;
-        float price, weight;
-        int availableCount;
-    public:
-        Product();
-        Product(float, float, int);
-        void printProductInfo();
-        string getItemName();
-        void setItemName(string);
-        float getPrice();
-        void setPrice(float);
-        float getWeight();
-        void setWeight(float);
-        int getAvailableCount(); // would be use to update inventory
-        void setAvailableCount(int);
+private:
+    static int productCount;
+    string itemName;
+    float price, weight;
+    int availableCount, productID;
+
+    static int getProductCount()
+    {
+        return productCount;
+    }
+
+public:
+    Product();
+    Product(float, float, int);
+    void printProductInfo();
+    int getProductID();
+    string getItemName();
+    void setItemName(string);
+    float getPrice();
+    void setPrice(float);
+    float getWeight();
+    void setWeight(float);
+    int getAvailableCount(); // would be use to update inventory
+    void setAvailableCount(int);
+    void subAvailableCount(int);
+    void addAvailableCount(int);
 };
 
-#endif 
+#endif

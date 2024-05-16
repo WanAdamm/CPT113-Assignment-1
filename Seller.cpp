@@ -46,10 +46,6 @@ void Seller::addUnitSold(int uS)
     inventory.addUnitSold(uS);
 }
 
-void Seller::subUnitSold(int uS)
-{
-    inventory.subUnitSold(uS);
-}
 
 void Seller::addUnitAvailable(int uA)
 {
@@ -64,4 +60,16 @@ void Seller::subUnitAvailable(int uA)
 void Seller::printItemAvailable()
 {
     inventory.printItemAvailable();
+}
+
+void Seller::sellItem(int id, int count)
+{
+    revenue += count * inventory.getItemPrice(id);
+    inventory.addUnitSold(count);
+    inventory.removeItem(id, count);
+}
+
+float Seller::getItemPrice(int id)
+{
+    return inventory.getItemPrice(id);
 }

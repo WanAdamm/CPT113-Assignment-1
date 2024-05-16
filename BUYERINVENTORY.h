@@ -13,6 +13,7 @@ class BuyerInventory
     public:
         BuyerInventory();
         void printItemAvailable();
+        void addItem(int, int);
 
 };
 

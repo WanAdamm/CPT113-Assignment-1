@@ -5,14 +5,16 @@
 
 class Shop{
     private:
-        Buyer buyer;
         Seller seller;
+        Buyer buyer;
     public:
         Shop();
         Shop(string, string, float);
         void printMenu();
-        void buyItem();
-        void sellItem();
+        void printSellerInfo();
+        void buyItem(int, int);
+        void printBuyerCredit();
+        void addBuyerCredit(float);
 };
 
 #endif
