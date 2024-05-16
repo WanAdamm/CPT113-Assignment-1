@@ -54,7 +54,7 @@ void BuyerInventory::printItemAvailable()
 {
     for (int i = 0; i < 5; i++)
     {
-        cakes[i].printProductInfo();
+        cout << cakes[i].getItemName() << " ";
         cout << "available count: " << cakes[i].getAvailableCount() << endl;
     }
 
