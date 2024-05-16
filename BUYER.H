@@ -16,6 +16,7 @@ class Buyer : public Account {
         void addCredit(float);
         void withdrawCredit(float);
         void buyItem(int, int, float);
+        void printInventory();
 };
 
 #endif

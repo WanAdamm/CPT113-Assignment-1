@@ -42,11 +42,16 @@ void Shop::buyItem(int id, int count)
 
 void Shop::printBuyerCredit()
 {
-    cout << buyer.getCredit() << endl;
+    cout << "Balance: " << buyer.getCredit() << endl;
 }
 
 void Shop::addBuyerCredit(float cred)
 {
     buyer.addCredit(cred);
     cout << "you've added RM" << cred << " to your account" << endl; 
+}
+
+void Shop::printBuyerInventory()
+{
+    buyer.printInventory();
 }

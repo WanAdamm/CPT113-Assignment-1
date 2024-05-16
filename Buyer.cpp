@@ -27,3 +27,8 @@ void Buyer::buyItem(int id, int count, float price)
     inventory.addItem(id, count);
     credit -= count * price;
 }
+
+void Buyer::printInventory()
+{
+    inventory.printItemAvailable();
+}

@@ -19,7 +19,9 @@ int main()
         cout << "1: print menu" << endl
              << "2: buy item" << endl
              << "3: check account balance" << endl
-             << "4: exit" << endl;
+             << "4: add balance" << endl
+             << "5: check inventory" << endl
+             << "6: exit" << endl;
         cin >> choice;
         switch (choice)
         {
@@ -38,6 +40,15 @@ int main()
             shop.printBuyerCredit();
             break;
         case 4:
+            int cred;
+            cout << "Enter amount of credit: ";
+            cin >> cred;
+            shop.addBuyerCredit(cred);
+            break;
+        case 5:
+            shop.printBuyerInventory();
+            break;
+        case 6:
             running = false;
             break;
         default:

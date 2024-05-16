@@ -7,7 +7,7 @@ using namespace std;
 
 BuyerInventory::BuyerInventory()
 {
-    fstream File("init.csv");
+    fstream File("init.txt");
 
     int cakeIndex = 0, cookieIndex = 0;
 
