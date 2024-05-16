@@ -1,6 +1,5 @@
 #ifndef BUYERINVENTORY_H
 #define BUYERINVENTORY_H
-#include "INVENTORY.h"
 #include "CAKE.h"
 #include "COOKIES.h"
 

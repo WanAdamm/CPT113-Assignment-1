@@ -1,6 +1,5 @@
 #ifndef SELLERINVENTORY_H
 #define SELLERINVENTORY_H
-#include "INVENTORY.h"
 #include "CAKE.h"
 #include "COOKIES.h"
 

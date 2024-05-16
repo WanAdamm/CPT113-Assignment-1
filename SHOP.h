@@ -2,7 +2,6 @@
 #define SHOP_H
 #include "BUYER.H"
 #include "SELLER.h"
-#include "INVENTORY.h"
 
 class Shop{
     private:
