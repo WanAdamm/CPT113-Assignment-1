@@ -2,13 +2,13 @@
 #define SELLER_H
 
 #include "ACCOUNT.h"
-#include "INVENTORY.h"
+#include "SELLERINVENTORY.h"
 
 class Seller: public Account {
 
     private:
         float revenue;
-        Inventory inventory;
+        SellerInventory inventory;
     public:
         Seller();
         Seller(float);

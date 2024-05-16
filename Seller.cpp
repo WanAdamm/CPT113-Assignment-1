@@ -63,5 +63,5 @@ void Seller::subUnitAvailable(int uA)
 
 void Seller::printItemAvailable()
 {
-    inventory.printProductAvailable();
+    inventory.printItemAvailable();
 }
