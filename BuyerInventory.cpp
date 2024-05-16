@@ -54,14 +54,13 @@ void BuyerInventory::printItemAvailable()
 {
     for (int i = 0; i < 5; i++)
     {
-        cout << cakes[i].getItemName() << " ";
-        cout << "available count: " << cakes[i].getAvailableCount() << endl;
+        cout << cakes[i].getItemName() << ": " << cakes[i].getAvailableCount() << endl;
     }
 
     for (int i = 0; i < 5; i++)
     {
-        cout << cakes[i].getItemName() << " ";
-        cout << "available count: " << cookies[i].getAvailableCount() << endl;
+        cout << cookies[i].getItemName() << ": " << cookies[i].getAvailableCount() << endl;
+
     }
 }
 
