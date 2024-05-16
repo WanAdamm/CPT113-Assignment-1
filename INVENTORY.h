@@ -3,13 +3,13 @@
 #include "CAKE.h"
 #include "COOKIES.h"
 class Inventory{
-    private:
+    protected:
         int unitSold, unitAvailable;
         Cake cakes[5];
         Cookies cookies[5];
     public:
         Inventory();
-        void setInventory(int,int);
+        void setInventory(int);
         int getUnitSold();
         int getUnitAvailable();
         void setUnitSold(int);

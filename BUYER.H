@@ -6,12 +6,10 @@ class Buyer : public Account {
 
     private:
         float credit;
-        int cakeCount;
-        int cookieCount;
+        int cakeCount = 0;
+        int cookieCount = 0;
     public:
         Buyer();
-        Buyer(float);
-        Buyer(float, string, int);
         float getCredit();
         void addCredit(float);
         void withdrawCredit(float);

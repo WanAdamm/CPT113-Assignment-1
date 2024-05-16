@@ -11,8 +11,8 @@ class Seller: public Account {
         Inventory inventory;
     public:
         Seller();
-        Seller(float, int); // int to initialize units available
-        Seller(float rev, int uA, string n, int t);
+        Seller(float);
+        Seller(float, string, int);
         void printSellerInfo(); 
         float getRevenue();
         void addRevenue(float);
@@ -21,6 +21,7 @@ class Seller: public Account {
         void subUnitSold(int);
         void addUnitAvailable(int);
         void subUnitAvailable(int);
+        void printItemAvailable();
 };
 
 #endif

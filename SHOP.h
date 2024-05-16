@@ -3,18 +3,15 @@
 #include "BUYER.H"
 #include "SELLER.h"
 #include "INVENTORY.h"
-#include "CAKE.h"
-#include "COOKIES.h"
 
 class Shop{
     private:
-        Inventory inventory;
-        Buyer buyer{100, "Wan", 1};
-        Seller seller{0, 100, "Tou", 2};
+        Buyer buyer;
+        Seller seller;
     public:
         Shop();
-        ~Shop();
-        void showMenu();
+        Shop(string, string, float);
+        void printMenu();
         void buyItem();
         void sellItem();
 };

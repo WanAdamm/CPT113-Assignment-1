@@ -4,22 +4,33 @@ using namespace std;
 
 Shop::Shop()
 {
-    inventory.setInventory(0,0); //set unitAvailable and unitSold to 0
+    buyer.setName("buyer");
+    buyer.setType(1);
+
+    seller.setName("seller");
+    seller.setType(2);
 }
 
-Shop::~Shop()
+Shop::Shop(string bName, string sName, float cred)
 {
+    buyer.setType(1);
+    seller.setType(2);
 
+    buyer.setName(bName);
+    seller.setName(sName);
+
+    buyer.addCredit(cred);
 }
 
-void Shop::showMenu()
+void Shop::printMenu()
 {
-
+    cout << "| Welcome |" << endl;
+    seller.printItemAvailable();
 }
 
 void Shop::buyItem()
 {
-
+    
 }
 
 void Shop::sellItem()

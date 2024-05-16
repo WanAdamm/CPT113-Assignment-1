@@ -5,13 +5,13 @@ using namespace std;
 Seller::Seller()
 {
     revenue = 0;
-    inventory.setInventory(0,0);
+    inventory.setInventory(0);
 }
 
-Seller::Seller(float rev, int uA)
+Seller::Seller(float rev)
 {
     revenue = rev;
-    inventory.setInventory(0, uA);
+    inventory.setInventory(0);
 }
 
 void Seller::printSellerInfo()
@@ -21,9 +21,9 @@ void Seller::printSellerInfo()
          << "Unit Available: " << inventory.getUnitAvailable() << endl;
 }
 
-Seller::Seller(float rev, int uA, string n, int t): Account(n, t){
+Seller::Seller(float rev, string n, int t): Account(n, t){
     revenue = rev;
-    inventory.setInventory(0, uA);
+    inventory.setInventory(0);
 }
 
 float Seller::getRevenue()
@@ -59,4 +59,9 @@ void Seller::addUnitAvailable(int uA)
 void Seller::subUnitAvailable(int uA)
 {
     inventory.subUnitAvailable(uA);
+}
+
+void Seller::printItemAvailable()
+{
+    inventory.printProductAvailable();
 }
