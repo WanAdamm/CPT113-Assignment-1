@@ -5,19 +5,15 @@ using namespace std;
 Seller::Seller()
 {
     revenue = 0;
-    inventory.setInventory(0);
 }
 
 void Seller::printSellerInfo()
 {
-    cout << "Revenue: " << revenue << endl 
-         << "Unit Sold: " << inventory.getUnitSold() << endl
-         << "Unit Available: " << inventory.getUnitAvailable() << endl;
+    cout << "Revenue: " << revenue << endl;
 }
 
 Seller::Seller(float rev, string n, int t): Account(n, t){
     revenue = rev;
-    inventory.setInventory(0);
 }
 
 float Seller::getRevenue()
@@ -35,22 +31,6 @@ void Seller::subRevenue(float rev)
     revenue -= rev;
 }
 
-void Seller::addUnitSold(int uS)
-{
-    inventory.addUnitSold(uS);
-}
-
-
-void Seller::addUnitAvailable(int uA)
-{
-    inventory.addUnitAvailable(uA);
-}
-
-void Seller::subUnitAvailable(int uA)
-{
-    inventory.subUnitAvailable(uA);
-}
-
 void Seller::printItemAvailable()
 {
     inventory.printItemAvailable();
@@ -59,7 +39,6 @@ void Seller::printItemAvailable()
 void Seller::sellItem(int id, int count)
 {
     revenue += count * inventory.getItemPrice(id);
-    inventory.addUnitSold(count);
     inventory.removeItem(id, count);
 }
 

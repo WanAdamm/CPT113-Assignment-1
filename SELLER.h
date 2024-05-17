@@ -16,9 +16,6 @@ class Seller: public Account {
         float getRevenue();
         void addRevenue(float);
         void subRevenue(float);
-        void addUnitSold(int);
-        void addUnitAvailable(int);
-        void subUnitAvailable(int);
         void printItemAvailable();
         void sellItem(int, int);
         float getItemPrice(int);
