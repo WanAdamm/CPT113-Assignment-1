@@ -9,6 +9,7 @@ class Buyer : public Account {
         float credit;
         int cakeCount = 0;
         int cookieCount = 0;
+        float moneySpent = 0;
         BuyerInventory inventory;
     public:
         Buyer();
@@ -17,6 +18,10 @@ class Buyer : public Account {
         void withdrawCredit(float);
         void buyItem(int, int, float);
         void printInventory();
+        float getMoneySpent();
+        int getCakeCount();
+        int getCookieCount();
+        void printItemReceipt();
 };
 
 #endif

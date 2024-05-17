@@ -27,7 +27,7 @@ BuyerInventory::BuyerInventory()
         getline(File, token, ',');
         weight = stof(token);
 
-        getline(File, token, ','); //skip available count line;
+        getline(File, token, ','); // skip available count info;
 
         getline(File, type, ',');
 
@@ -54,24 +54,52 @@ void BuyerInventory::printItemAvailable()
 {
     for (int i = 0; i < 5; i++)
     {
-        cout << cakes[i].getItemName() << ": " << cakes[i].getAvailableCount() << endl;
+        if (cakes[i].getAvailableCount() > 0)
+        {
+            cout << cakes[i].getItemName() << ": " << cakes[i].getAvailableCount() << endl;
+        }
     }
 
     for (int i = 0; i < 5; i++)
     {
-        cout << cookies[i].getItemName() << ": " << cookies[i].getAvailableCount() << endl;
-
+        if (cookies[i].getAvailableCount() > 0)
+        {
+            cout << cookies[i].getItemName() << ": " << cookies[i].getAvailableCount() << endl;
+        }
     }
+
+    cout << endl;
 }
 
 void BuyerInventory::addItem(int id, int count)
 {
-    if(id >= 5)
+    if (id >= 5)
     {
-        cookies[id-5].addAvailableCount(count);
+        cookies[id - 5].addAvailableCount(count);
     }
-    else if(id >= 0 && id < 5)
+    else if (id >= 0 && id < 5)
     {
         cakes[id].addAvailableCount(count);
     }
+}
+
+void BuyerInventory::printInventorySummary()
+{
+    for (int i = 0; i < 5; i++)
+    {
+        if (cakes[i].getAvailableCount() > 0)
+        {
+            cout << cakes[i].getItemName() << ": " << cakes[i].getAvailableCount() << cakes[i].getAvailableCount() << cakes[i].getPrice() << cakes[i].getAvailableCount() * cakes[i].getPrice() << endl;
+        }
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        if (cookies[i].getAvailableCount() > 0)
+        {
+            cout << cookies[i].getItemName() << ": " << cookies[i].getAvailableCount() << cookies[i].getAvailableCount() << cookies[i].getPrice() << cookies[i].getAvailableCount() * cookies[i].getPrice() << endl;
+        }
+    }
+
+    cout << endl;
 }

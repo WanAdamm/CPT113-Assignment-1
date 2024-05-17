@@ -14,6 +14,7 @@ class BuyerInventory
         BuyerInventory();
         void printItemAvailable();
         void addItem(int, int);
+        void printInventorySummary();
 
 };
 

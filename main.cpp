@@ -8,9 +8,9 @@ int main()
     cout << "Enter your name: ";
     cin >> userName;
 
-    Shop shop(userName, "Apek", 100); //using overloading constructor to initialize object
+    Shop shop(userName, "Apek", 100); // using overloading constructor to initialize object
 
-    //will print menu at initialization
+    // will print menu at initialization
     shop.printMenu();
     
     bool running = true;
@@ -57,6 +57,9 @@ int main()
             break;
         }
     }
+
+    // Print receipt after all is done
+    shop.printReceipt();
 
     return 0;
 }

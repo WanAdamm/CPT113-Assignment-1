@@ -7,9 +7,11 @@ class Shop{
     private:
         Seller seller;
         Buyer buyer;
+
     public:
         Shop();
         Shop(string, string, float);
+        void printReceipt();
         void printMenu();
         void printSellerInfo();
         void buyItem(int, int);

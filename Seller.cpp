@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+//TODO: unit available has no use
+
 Seller::Seller()
 {
     revenue = 0;
