@@ -1,7 +1,5 @@
 #include <iostream>
 #include "SHOP.h"
-#include "CAKE.h"
-#include "COOKIES.h"
 using namespace std;
 
 int main()
@@ -10,7 +8,10 @@ int main()
     cout << "Enter your name: ";
     cin >> userName;
 
-    Shop shop(userName, "Apek", 100);
+    Shop shop(userName, "Apek", 100); //using overloading constructor to initialize object
+
+    //will print menu at initialization
+    shop.printMenu();
     
     bool running = true;
     while(running)
@@ -21,7 +22,7 @@ int main()
              << "3: check account balance" << endl
              << "4: add balance" << endl
              << "5: check inventory" << endl
-             << "6: exit" << endl;
+             << "6: exit" << endl << endl;
         cin >> choice;
         switch (choice)
         {

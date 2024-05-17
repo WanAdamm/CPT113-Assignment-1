@@ -136,6 +136,8 @@ void SellerInventory::printItemAvailable()
         cookies[i].printProductInfo();
         cout << "available count: " << cookies[i].getAvailableCount() << endl;
     }
+
+    cout << endl;
 }
 
 float SellerInventory::getItemPrice(int id)

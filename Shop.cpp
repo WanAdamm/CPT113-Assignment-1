@@ -26,6 +26,7 @@ void Shop::printMenu()
 {
     cout << "| Welcome " << buyer.getName() << " |"<< endl;
     seller.printItemAvailable();
+    cout << endl;
 }
 
 void Shop::printSellerInfo()
@@ -42,13 +43,13 @@ void Shop::buyItem(int id, int count)
 
 void Shop::printBuyerCredit()
 {
-    cout << "Balance: " << buyer.getCredit() << endl;
+    cout << "Balance: " << buyer.getCredit() << endl << endl;
 }
 
 void Shop::addBuyerCredit(float cred)
 {
     buyer.addCredit(cred);
-    cout << "you've added RM" << cred << " to your account" << endl; 
+    cout << "you've added RM" << cred << " to your account" << endl << endl; 
 }
 
 void Shop::printBuyerInventory()
