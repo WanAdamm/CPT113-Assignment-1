@@ -128,16 +128,14 @@ void SellerInventory::printItemAvailable()
     for (int i = 0; i < 5; i++)
     {
         cakes[i].printProductInfo();
-        cout << "available count: " << cakes[i].getAvailableCount() << endl;
+        cout << "available count: " << cakes[i].getAvailableCount() << endl << endl;
     }
 
     for (int i = 0; i < 5; i++)
     {
         cookies[i].printProductInfo();
-        cout << "available count: " << cookies[i].getAvailableCount() << endl;
+        cout << "available count: " << cookies[i].getAvailableCount() << endl << endl;
     }
-
-    cout << endl;
 }
 
 float SellerInventory::getItemPrice(int id)
