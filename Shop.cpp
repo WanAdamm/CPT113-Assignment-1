@@ -91,3 +91,8 @@ void Shop::printBuyerInventory()
 {
     buyer.printInventory();
 }
+
+int Shop::buyerItemCount()
+{
+    return (buyer.getCakeCount() + buyer.getCookieCount());
+}

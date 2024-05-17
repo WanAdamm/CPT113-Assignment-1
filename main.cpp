@@ -52,14 +52,32 @@ int main()
             shop.printBuyerCredit();
             break;
         case 4:
-            int cred;
+            float cred;
             cout << "Enter amount of credit: ";
             cin >> cred;
-            shop.addBuyerCredit(cred);
+
+            if(cred < 0)
+            {
+                cout << "Please enter a positive number" << endl;
+            }
+            else
+            {
+                shop.addBuyerCredit(cred);
+            }
+            
             break;
         case 5:
-            shop.printBuyerInventory();
+            if (shop.buyerItemCount() > 0)
+            {
+               shop.printBuyerInventory();
+            }
+            else
+            {
+               cout << "You have not purchase anything yet\n" << endl;
+            }
+
             break;
+
         case 6:
             running = false;
             break;

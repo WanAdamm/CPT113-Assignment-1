@@ -18,6 +18,7 @@ class Shop{
         void printBuyerCredit();
         void addBuyerCredit(float);
         void printBuyerInventory();
+        int buyerItemCount();
 };
 
 #endif
