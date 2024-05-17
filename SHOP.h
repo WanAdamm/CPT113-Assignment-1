@@ -1,6 +1,6 @@
 #ifndef SHOP_H
 #define SHOP_H
-#include "BUYER.H"
+#include "BUYER.h"
 #include "SELLER.h"
 
 class Shop{
