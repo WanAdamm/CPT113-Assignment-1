@@ -24,6 +24,7 @@ int main()
              << "5: check inventory" << endl
              << "6: exit" << endl << endl;
         cin >> choice;
+        cout << endl;
         switch (choice)
         {
         case 1:

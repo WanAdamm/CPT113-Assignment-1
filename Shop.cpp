@@ -24,12 +24,14 @@ Shop::Shop(string bName, string sName, float cred)
 
 void Shop::printReceipt()
 {
+    cout << "recipient: " << buyer.getName() << endl;
+
     buyer.printItemReceipt();
 
     cout << "Total cake bought:   " << buyer.getCakeCount() << endl;
     cout << "Total cookie bought: " << buyer.getCookieCount() << endl;
 
-    cout << buyer.getMoneySpent() << endl << endl;
+    cout << "Spent: RM " << buyer.getMoneySpent() << endl << endl;
 }
 
 void Shop::printMenu()
@@ -56,7 +58,7 @@ void Shop::buyItem(int id, int count)
         float price = seller.getItemPrice(id);
         buyer.buyItem(id, count, price);
 
-        cout << "RM " << price << " has been deducted" << endl; 
+        cout << "RM " << price*count << " has been deducted" << endl; 
     }
 
     cout << endl;
@@ -64,7 +66,7 @@ void Shop::buyItem(int id, int count)
 
 void Shop::printBuyerCredit()
 {
-    cout << "Balance: " << buyer.getCredit() << endl
+    cout << "Balance: RM " << buyer.getCredit() << endl
          << endl;
 }
 

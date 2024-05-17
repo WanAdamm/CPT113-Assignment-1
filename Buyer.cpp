@@ -58,5 +58,13 @@ int Buyer::getCookieCount()
 
 void Buyer::printItemReceipt()
 {
-    inventory.printInventorySummary();
+    if(cakeCount + cookieCount > 0)
+    {
+        inventory.printInventorySummary();
+    }
+    else
+    {
+        cout << "Nothing bought" << endl << endl;
+    }
+    
 }
