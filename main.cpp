@@ -17,7 +17,7 @@ int main()
     while(running)
     {
         int choice;
-        cout << "1: print menu" << endl
+        cout << "1: menu" << endl
              << "2: buy item" << endl
              << "3: check account balance" << endl
              << "4: add balance" << endl
@@ -36,7 +36,16 @@ int main()
             cin >> id;
             cout << "Enter how many of it you want: ";
             cin >> count;
-            shop.buyItem(id, count);
+
+            if(id >= 0 && id <= 9)
+            {
+                shop.buyItem(id, count);
+            }
+            else
+            {
+                cout << "INVALID ITEM ID" << endl;
+            }
+
             break;
         case 3:
             shop.printBuyerCredit();

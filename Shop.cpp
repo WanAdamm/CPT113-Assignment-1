@@ -48,6 +48,7 @@ void Shop::printSellerInfo()
 
 void Shop::buyItem(int id, int count)
 {
+    // TODO: input validation for count
     if (buyer.getCredit() < (seller.getItemPrice(id) * count))
     {
         cout << "Insufficinet balance, add more credit to your account to proceed" << endl;

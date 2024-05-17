@@ -2,17 +2,9 @@
 #include <iostream>
 using namespace std;
 
-//TODO: unit available has no use
-
 Seller::Seller()
 {
     revenue = 0;
-    inventory.setInventory(0);
-}
-
-Seller::Seller(float rev)
-{
-    revenue = rev;
     inventory.setInventory(0);
 }
 

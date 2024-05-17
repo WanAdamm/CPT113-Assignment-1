@@ -72,57 +72,6 @@ void SellerInventory::removeItem(int id, int count)
     }
 }
 
-void SellerInventory::setInventory(int uS)
-{
-    unitSold = 0;
-    unitAvailable = 0;
-
-    for (int i = 0; i < Cake::getCakeCount(); i++)
-    {
-        unitAvailable += cakes[i].getAvailableCount();
-    }
-
-    for (int i = 0; i < Cookies::getCookieCount(); i++)
-    {
-        unitAvailable += cookies[i].getAvailableCount();
-    }
-}
-
-int SellerInventory::getUnitSold()
-{
-    return unitSold;
-}
-
-void SellerInventory::setUnitSold(int uS)
-{
-    unitSold = uS;
-}
-
-int SellerInventory::getUnitAvailable()
-{
-    return unitAvailable;
-}
-
-void SellerInventory::setUnitAvailable(int uA)
-{
-    unitAvailable = uA;
-}
-
-void SellerInventory::addUnitSold(int uS)
-{
-    unitSold += uS;
-}
-
-void SellerInventory::addUnitAvailable(int uA)
-{
-    unitAvailable += uA;
-}
-
-void SellerInventory::subUnitAvailable(int uA)
-{
-    unitAvailable -= uA;
-}
-
 void SellerInventory::printItemAvailable()
 {
     for (int i = 0; i < 5; i++)

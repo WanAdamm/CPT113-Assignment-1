@@ -11,7 +11,6 @@ class Seller: public Account {
         SellerInventory inventory;
     public:
         Seller();
-        Seller(float);
         Seller(float, string, int);
         void printSellerInfo(); 
         float getRevenue();
