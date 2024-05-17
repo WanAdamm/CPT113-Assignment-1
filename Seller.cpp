@@ -46,3 +46,8 @@ float Seller::getItemPrice(int id)
 {
     return inventory.getItemPrice(id);
 }
+
+int Seller::getItemCount(int id)
+{
+    return inventory.getItemCount(id);
+}

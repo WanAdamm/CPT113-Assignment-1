@@ -62,11 +62,11 @@ SellerInventory::SellerInventory()
 
 void SellerInventory::removeItem(int id, int count)
 {
-    if(id >= 5)
+    if (id >= 5)
     {
-        cookies[id-5].subAvailableCount(count);
+        cookies[id - 5].subAvailableCount(count);
     }
-    else if(id >= 0 && id < 5)
+    else if (id >= 0 && id < 5)
     {
         cakes[id].subAvailableCount(count);
     }
@@ -89,14 +89,30 @@ float SellerInventory::getItemPrice(int id)
 {
     float itemPrice = 0;
 
-    if(id >= 5)
+    if (id >= 5)
     {
-        itemPrice = cookies[id-5].getPrice();
+        itemPrice = cookies[id - 5].getPrice();
     }
-    else if(id >= 0 && id < 5)
+    else if (id >= 0 && id < 5)
     {
         itemPrice = cakes[id].getPrice();
     }
 
     return itemPrice;
+}
+
+int SellerInventory::getItemCount(int id)
+{
+    int itemCount = 0;
+
+    if (id >= 5)
+    {
+        itemCount = cookies[id - 5].getAvailableCount();
+    }
+    else if (id >= 0 && id < 5)
+    {
+        itemCount = cakes[id].getAvailableCount();
+    }
+
+    return itemCount;
 }

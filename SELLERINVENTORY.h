@@ -16,6 +16,7 @@ public:
     void removeItem(int, int);
     void printItemAvailable();
     float getItemPrice(int);
+    int getItemCount(int);
 };
 
 #endif

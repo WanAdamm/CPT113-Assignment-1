@@ -19,6 +19,7 @@ class Seller: public Account {
         void printItemAvailable();
         void sellItem(int, int);
         float getItemPrice(int);
+        int getItemCount(int);
 };
 
 #endif

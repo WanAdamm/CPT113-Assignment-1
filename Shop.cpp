@@ -32,13 +32,14 @@ void Shop::printReceipt()
     cout << "Total cake bought:   " << buyer.getCakeCount() << endl;
     cout << "Total cookie bought: " << buyer.getCookieCount() << endl;
 
-    cout << "Spent: RM " << buyer.getMoneySpent() << endl << endl;
+    cout << "Spent: RM " << buyer.getMoneySpent() << endl
+         << endl;
 }
 
 void Shop::printMenu()
 {
     cout << setw(45) << "| Welcome " << buyer.getName() << " |" << endl;
-    cout << setw(30) << "Item" << setw(21) << "Price Per Unit" << setw(10) << "Weight" << setw(10) << "ID" <<  setw(20) << "Available Count" << endl;
+    cout << setw(30) << "Item" << setw(21) << "Price Per Unit" << setw(10) << "Weight" << setw(10) << "ID" << setw(20) << "Available Count" << endl;
     seller.printItemAvailable();
     cout << endl;
 }
@@ -50,18 +51,24 @@ void Shop::printSellerInfo()
 
 void Shop::buyItem(int id, int count)
 {
-    // TODO: input validation for count
     if (buyer.getCredit() < (seller.getItemPrice(id) * count))
     {
-        cout << "Insufficinet balance, add more credit to your account to proceed" << endl;
+        cout << "Insufficient balance, add more credit to your account to proceed" << endl;
     }
     else
     {
-        seller.sellItem(id, count);
-        float price = seller.getItemPrice(id);
-        buyer.buyItem(id, count, price);
+        if (seller.getItemCount(id) < count)
+        {
+            cout << "you've reached maximun number for this item" << endl;
+        }
+        else
+        {
+            seller.sellItem(id, count);
+            float price = seller.getItemPrice(id);
+            buyer.buyItem(id, count, price);
 
-        cout << "RM " << price*count << " has been deducted" << endl; 
+            cout << "RM " << price * count << " has been deducted" << endl;
+        }
     }
 
     cout << endl;
