@@ -64,7 +64,7 @@ void Buyer::printItemReceipt()
     }
     else
     {
-        cout << "Nothing bought" << endl << endl;
+        cout << endl << "Nothing bought" << endl << endl;
     }
     
 }

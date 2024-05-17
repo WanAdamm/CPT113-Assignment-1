@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "SHOP.h"
 using namespace std;
 
@@ -36,7 +37,8 @@ void Shop::printReceipt()
 
 void Shop::printMenu()
 {
-    cout << "| Welcome " << buyer.getName() << " |" << endl;
+    cout << setw(45) << "| Welcome " << buyer.getName() << " |" << endl;
+    cout << setw(30) << "Item" << setw(21) << "Price Per Unit" << setw(10) << "Weight" << setw(10) << "ID" <<  setw(20) << "Available Count" << endl;
     seller.printItemAvailable();
     cout << endl;
 }

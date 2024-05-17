@@ -1,5 +1,6 @@
 #include "PRODUCT.h"
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int Product::productCount = 0;
@@ -24,10 +25,11 @@ Product::Product(float p, float w, int aC)
 
 void Product::printProductInfo()
 {
-    cout  << "Item:            " << itemName << endl
-          << "Price:           RM " << price << endl
-          << "Weight:          " << weight << "g" << endl
-          << "ID:              " << productID << endl;
+    cout  << setw(30) << itemName
+          << setw(16) << fixed << setprecision(2) << "RM " << price
+          << setw(10) << weight << "g"
+          << setw(10) << productID
+          << setw(18) << availableCount << endl;
 }
 
 int Product::getProductID()
