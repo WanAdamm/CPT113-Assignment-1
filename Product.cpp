@@ -24,10 +24,10 @@ Product::Product(float p, float w, int aC)
 
 void Product::printProductInfo()
 {
-    cout << "Item: " << itemName << " "
-         << "Price(RM): " << price << " "
-         << "Weight(g): " << weight << " "
-         << "ID: " << productID << endl;
+    cout  << "Item:            " << itemName << endl
+          << "Price:           RM " << price << endl
+          << "Weight:          " << weight << "g" << endl
+          << "ID:              " << productID << endl;
 }
 
 int Product::getProductID()
