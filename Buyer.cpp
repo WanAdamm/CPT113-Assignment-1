@@ -43,7 +43,7 @@ void Buyer::printInventory()
     inventory.printItemAvailable();
 }
 
-float Buyer::getMoneySpent() const //getter functionfor moneySpent
+float Buyer::getMoneySpent() const //getter function for moneySpent
 {
     return moneySpent;
 }

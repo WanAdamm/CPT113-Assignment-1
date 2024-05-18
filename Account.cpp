@@ -4,12 +4,14 @@ using namespace std;
 
 Account::Account()
 {
+    // initialize name and type
     name = "default user";
     type = 0;
 }
 
 Account::Account(string n, int t)
 {
+    // initialize name and type to value passed to constructor
     name = n;
 
     if ((t != 1) && (t != 2))
@@ -23,6 +25,7 @@ Account::Account(string n, int t)
 
 void Account::printAccountInfo()
 {
+    // print the account info
     cout << "Name: " << name << endl;
     cout << "Type: ";
     if (type == 1)
@@ -41,20 +44,24 @@ void Account::printAccountInfo()
 
 string Account::getName() const
 {
+    // return name
     return name;
 }
 
 void Account::setName(string n)
 {
+    // set name to value passed into the function
     name = n;
 }
 
 int Account::getType() const
 {
+    // return type
     return type;
 }
 
 void Account::setType(int t)
 {
+    // set value of type to value passed into the function
     type = t;
 }
