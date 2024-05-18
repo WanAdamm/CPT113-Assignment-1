@@ -17,7 +17,7 @@ Seller::Seller(float rev, string n, int t) : Account(n, t)
     revenue = rev;
 }
 
-float Seller::getRevenue()
+float Seller::getRevenue() const
 {
     return revenue;
 }
@@ -43,12 +43,12 @@ void Seller::sellItem(int id, int count)
     inventory.removeItem(id, count);
 }
 
-float Seller::getItemPrice(int id)
+float Seller::getItemPrice(int id) const
 {
     return inventory.getItemPrice(id);
 }
 
-int Seller::getItemCount(int id)
+int Seller::getItemCount(int id) const
 {
     return inventory.getItemCount(id);
 }

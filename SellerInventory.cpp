@@ -85,7 +85,7 @@ void SellerInventory::printItemAvailable()
     }
 }
 
-float SellerInventory::getItemPrice(int id)
+float SellerInventory::getItemPrice(int id) const
 {
     float itemPrice = 0;
 
@@ -101,7 +101,7 @@ float SellerInventory::getItemPrice(int id)
     return itemPrice;
 }
 
-int SellerInventory::getItemCount(int id)
+int SellerInventory::getItemCount(int id) const
 {
     int itemCount = 0;
 

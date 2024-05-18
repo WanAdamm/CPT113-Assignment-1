@@ -15,14 +15,14 @@ private:
 
 public:
     Buyer();
-    float getCredit();
+    float getCredit() const;
     void addCredit(float);
     void withdrawCredit(float);
     void buyItem(int, int, float);
     void printInventory();
-    float getMoneySpent();
-    int getCakeCount();
-    int getCookieCount();
+    float getMoneySpent() const;
+    int getCakeCount() const;
+    int getCookieCount() const;
     void printItemReceipt();
 };
 

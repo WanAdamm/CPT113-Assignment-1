@@ -13,9 +13,9 @@ public:
     Account();
     Account(string, int);
     void printAccountInfo();
-    string getName();
+    string getName() const;
     void setName(string);
-    int getType();
+    int getType() const;
     void setType(int);
 };
 

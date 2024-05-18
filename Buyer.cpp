@@ -7,7 +7,7 @@ Buyer::Buyer()
     credit = 0;
 }
 
-float Buyer::getCredit()
+float Buyer::getCredit() const
 {
     return credit;
 }
@@ -43,17 +43,17 @@ void Buyer::printInventory()
     inventory.printItemAvailable();
 }
 
-float Buyer::getMoneySpent()
+float Buyer::getMoneySpent() const
 {
     return moneySpent;
 }
 
-int Buyer::getCakeCount()
+int Buyer::getCakeCount() const
 {
     return cakeCount;
 }
 
-int Buyer::getCookieCount()
+int Buyer::getCookieCount() const
 {
     return cookieCount;
 }

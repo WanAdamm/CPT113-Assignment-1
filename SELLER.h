@@ -15,13 +15,13 @@ public:
     Seller();
     Seller(float, string, int);
     void printSellerInfo();
-    float getRevenue();
+    float getRevenue() const;
     void addRevenue(float);
     void subRevenue(float);
     void printItemAvailable();
     void sellItem(int, int);
-    float getItemPrice(int);
-    int getItemCount(int);
+    float getItemPrice(int) const;
+    int getItemCount(int) const;
 };
 
 #endif

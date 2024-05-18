@@ -16,8 +16,8 @@ public:
     SellerInventory();
     void removeItem(int, int);
     void printItemAvailable();
-    float getItemPrice(int);
-    int getItemCount(int);
+    float getItemPrice(int) const;
+    int getItemCount(int) const;
 };
 
 #endif

@@ -39,7 +39,7 @@ void Account::printAccountInfo()
     }
 }
 
-string Account::getName()
+string Account::getName() const
 {
     return name;
 }
@@ -49,7 +49,7 @@ void Account::setName(string n)
     name = n;
 }
 
-int Account::getType()
+int Account::getType() const
 {
     return type;
 }
