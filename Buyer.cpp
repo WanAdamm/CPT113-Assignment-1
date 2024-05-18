@@ -23,11 +23,12 @@ void Buyer::withdrawCredit(float cred)
 }
 
 void Buyer::buyItem(int id, int count, float price)
-{   if(id >= 5 && id <= 9)
+{
+    if (id >= 5 && id <= 9)
     {
         cookieCount += count;
     }
-    else if(id >= 0 && id < 5)
+    else if (id >= 0 && id < 5)
     {
         cakeCount += count;
     }
@@ -58,13 +59,14 @@ int Buyer::getCookieCount()
 
 void Buyer::printItemReceipt()
 {
-    if(cakeCount + cookieCount > 0)
+    if (cakeCount + cookieCount > 0)
     {
         inventory.printInventorySummary();
     }
     else
     {
-        cout << endl << "Nothing bought" << endl << endl;
+        cout << endl
+             << "Nothing bought" << endl
+             << endl;
     }
-    
 }

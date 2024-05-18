@@ -3,19 +3,19 @@
 #include "CAKE.h"
 #include "COOKIES.h"
 
-//Inventory for buyer
+// Inventory for buyer
 
 class BuyerInventory
 {
-    private:
-        Cake cakes[5];
-        Cookies cookies[5];
-    public:
-        BuyerInventory();
-        void printItemAvailable();
-        void addItem(int, int);
-        void printInventorySummary();
+private:
+    Cake cakes[5];
+    Cookies cookies[5];
 
+public:
+    BuyerInventory();
+    void printItemAvailable();
+    void addItem(int, int);
+    void printInventorySummary();
 };
 
 #endif

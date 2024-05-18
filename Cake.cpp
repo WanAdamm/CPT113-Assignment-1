@@ -9,7 +9,7 @@ Cake::Cake()
     cakeCount++;
 }
 
-Cake::Cake(float p, float w, int aC):Product(p,w,aC)
+Cake::Cake(float p, float w, int aC) : Product(p, w, aC)
 {
     cakeCount++;
 }

@@ -25,11 +25,11 @@ Product::Product(float p, float w, int aC)
 
 void Product::printProductInfo()
 {
-    cout  << setw(30) << itemName
-          << setw(16) << fixed << setprecision(2) << "RM " << price
-          << setw(10) << weight << "g"
-          << setw(10) << productID
-          << setw(18) << availableCount << endl;
+    cout << setw(30) << itemName
+         << setw(16) << fixed << setprecision(2) << "RM " << price
+         << setw(10) << weight << "g"
+         << setw(10) << productID
+         << setw(18) << availableCount << endl;
 }
 
 int Product::getProductID()
@@ -39,12 +39,12 @@ int Product::getProductID()
 
 string Product::getItemName()
 {
-  return itemName;
+    return itemName;
 }
 
 void Product::setItemName(string n)
 {
-  itemName = n;
+    itemName = n;
 }
 
 float Product::getPrice()

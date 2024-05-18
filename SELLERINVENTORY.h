@@ -11,6 +11,7 @@ private:
     int unitSold, unitAvailable;
     Cake cakes[5];
     Cookies cookies[5];
+
 public:
     SellerInventory();
     void removeItem(int, int);

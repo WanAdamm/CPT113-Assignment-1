@@ -12,7 +12,8 @@ void Seller::printSellerInfo()
     cout << "Revenue: " << revenue << endl;
 }
 
-Seller::Seller(float rev, string n, int t): Account(n, t){
+Seller::Seller(float rev, string n, int t) : Account(n, t)
+{
     revenue = rev;
 }
 

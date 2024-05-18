@@ -86,13 +86,13 @@ void BuyerInventory::addItem(int id, int count)
 
 void BuyerInventory::printInventorySummary()
 {
-    cout << setw(30) << "Item" << setw(10) << "Count" <<  setw(33) << "Price Per Unit" << setw(21) << "Total Price" << endl;
+    cout << setw(30) << "Item" << setw(10) << "Count" << setw(33) << "Price Per Unit" << setw(21) << "Total Price" << endl;
     for (int i = 0; i < 5; i++)
     {
         if (cakes[i].getAvailableCount() > 0)
         {
-            cout << setw(30) <<cakes[i].getItemName();
-            cout << setw(10) << cakes[i].getAvailableCount() << setw(30) << "RM " << cakes[i].getPrice() << setw(18) << "RM " << cakes[i].getAvailableCount() * cakes[i].getPrice()<< endl;
+            cout << setw(30) << cakes[i].getItemName();
+            cout << setw(10) << cakes[i].getAvailableCount() << setw(30) << "RM " << cakes[i].getPrice() << setw(18) << "RM " << cakes[i].getAvailableCount() * cakes[i].getPrice() << endl;
         }
     }
 
@@ -100,7 +100,7 @@ void BuyerInventory::printInventorySummary()
     {
         if (cookies[i].getAvailableCount() > 0)
         {
-            cout << setw(30) <<cookies[i].getItemName();
+            cout << setw(30) << cookies[i].getItemName();
             cout << setw(10) << cookies[i].getAvailableCount() << setw(30) << "RM " << cookies[i].getPrice() << setw(18) << "RM " << cookies[i].getAvailableCount() * cookies[i].getPrice() << endl;
         }
     }
