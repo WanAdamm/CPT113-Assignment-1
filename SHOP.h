@@ -23,7 +23,7 @@ class Shop{
         void setDiscount(float);
         float getDiscount();
 
-        friend void priceAfterDiscount(Shop& shop);
+        friend void setBuyerDiscount(Shop& shop);
 };
 
 #endif

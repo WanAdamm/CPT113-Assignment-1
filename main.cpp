@@ -3,7 +3,8 @@
 
 using namespace std;
 
-void priceAfterDiscount(Shop &shop)
+// friend function to set discount;
+void setBuyerDiscount(Shop &shop)
 {
     if (shop.buyer.getMoneySpent() > 300.00)
     {
@@ -36,7 +37,7 @@ int main()
         cin >> choice;
         cout << endl;
 
-        priceAfterDiscount(shop); // will run after every round checking if the buyer have spent more than 300 and applying discount if more than 300 has been spent
+        setBuyerDiscount(shop); // will run after every round checking if the buyer have spent more than 300 and applying discount if more than 300 has been spent
 
         switch (choice)
         {

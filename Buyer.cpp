@@ -24,6 +24,7 @@ void Buyer::withdrawCredit(float cred)
 
 void Buyer::buyItem(int id, int count, float price)
 {
+    // id is used to check whether it is of type cookies or cakes
     if (id >= 5 && id <= 9)
     {
         cookieCount += count;
@@ -32,8 +33,8 @@ void Buyer::buyItem(int id, int count, float price)
     {
         cakeCount += count;
     }
-    inventory.addItem(id, count);
-    credit -= count * price;
+    inventory.addItem(id, count); // add the item that have been bought to inventory
+    credit -= count * price; // subtract the credit after buying 
     moneySpent += count * price;
 }
 

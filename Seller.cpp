@@ -39,7 +39,7 @@ void Seller::printItemAvailable()
 
 void Seller::sellItem(int id, int count)
 {
-    revenue += count * inventory.getItemPrice(id);
+    revenue += count * inventory.getItemPrice(id); // seller will get full revenue, loss because of discount will be bear by the shop
     inventory.removeItem(id, count);
 }
 
