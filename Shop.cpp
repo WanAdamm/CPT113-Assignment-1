@@ -51,9 +51,7 @@ void Shop::printSellerInfo()
 
 void Shop::buyItem(int id, int count)
 {
-    float multiplier = 1.00 - discount; // to handle price after discount
-
-    if (buyer.getCredit() < ((seller.getItemPrice(id) * count) * multiplier))
+    if (buyer.getCredit() < (seller.getItemPrice(id) * count))
     {
         cout << "Insufficient balance, add more credit to your account to proceed" << endl;
     }
@@ -66,7 +64,7 @@ void Shop::buyItem(int id, int count)
         else
         {
             seller.sellItem(id, count);                         // sellItem will deduct the item from seller inventory
-            float price = seller.getItemPrice(id) * multiplier; // getItemPrice will get the price for item requested
+            float price = seller.getItemPrice(id); // getItemPrice will get the price for item requested
             buyer.buyItem(id, count, price);                    // passing the required information to buyer
 
             cout << "RM " << price * count << " has been deducted" << endl;
