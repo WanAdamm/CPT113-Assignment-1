@@ -3,6 +3,14 @@
 
 using namespace std;
 
+void priceAfterDiscount(Shop &shop)
+{
+    if (shop.buyer.getMoneySpent() > 300.00)
+    {
+        shop.setDiscount(0.05); // set discount to 5% if customer already bought item more than 300;
+    }
+}
+
 int main()
 {
     string userName;
@@ -13,9 +21,9 @@ int main()
 
     // will print menu at initialization
     shop.printMenu();
-    
+
     bool running = true;
-    while(running)
+    while (running)
     {
         int choice;
         cout << "1: menu" << endl
@@ -23,9 +31,13 @@ int main()
              << "3: check account balance" << endl
              << "4: add balance" << endl
              << "5: check inventory" << endl
-             << "6: exit" << endl << endl;
+             << "6: exit" << endl
+             << endl;
         cin >> choice;
         cout << endl;
+
+        priceAfterDiscount(shop); // will run after every round checking if the buyer have spent more than 300 and applying discount if more than 300 has been spent
+
         switch (choice)
         {
         case 1:
@@ -38,7 +50,7 @@ int main()
             cout << "Enter how many of it you want: ";
             cin >> count;
 
-            if(id >= 0 && id <= 9)
+            if (id >= 0 && id <= 9)
             {
                 shop.buyItem(id, count);
             }
@@ -56,7 +68,7 @@ int main()
             cout << "Enter amount of credit: ";
             cin >> cred;
 
-            if(cred < 0)
+            if (cred < 0)
             {
                 cout << "Please enter a positive number" << endl;
             }
@@ -64,16 +76,17 @@ int main()
             {
                 shop.addBuyerCredit(cred);
             }
-            
+
             break;
         case 5:
             if (shop.buyerItemCount() > 0)
             {
-               shop.printBuyerInventory();
+                shop.printBuyerInventory();
             }
             else
             {
-               cout << "You have not purchase anything yet\n" << endl;
+                cout << "You have not purchase anything yet\n"
+                     << endl;
             }
 
             break;

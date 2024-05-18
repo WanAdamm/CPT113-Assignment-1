@@ -5,6 +5,7 @@
 
 class Shop{
     private:
+        float discount = 0.0;
         Seller seller;
         Buyer buyer;
 
@@ -19,6 +20,10 @@ class Shop{
         void addBuyerCredit(float);
         void printBuyerInventory();
         int buyerItemCount();
+        void setDiscount(float);
+        float getDiscount();
+
+        friend void priceAfterDiscount(Shop& shop);
 };
 
 #endif
