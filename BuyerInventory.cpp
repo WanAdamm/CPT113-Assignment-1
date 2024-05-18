@@ -6,6 +6,33 @@
 #include <iomanip>
 using namespace std;
 
+ostream &operator<<(ostream &out, const BuyerInventory &inventory)
+{
+    out << setw(30) << "Item" << setw(10) << "Count" << setw(33) << "Price Per Unit" << setw(21) << "Total Price" << endl;
+
+    for (int i = 0; i < 5; i++)
+    {
+        if (inventory.cakes[i].getAvailableCount() > 0)
+        {
+            out << setw(30) << inventory.cakes[i].getItemName();
+            out << setw(10) << inventory.cakes[i].getAvailableCount() << setw(30) << "RM " << inventory.cakes[i].getPrice() << setw(18) << "RM " << inventory.cakes[i].getAvailableCount() * inventory.cakes[i].getPrice() << endl;
+        }
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        if (inventory.cookies[i].getAvailableCount() > 0)
+        {
+            out << setw(30) << inventory.cookies[i].getItemName();
+            out << setw(10) << inventory.cookies[i].getAvailableCount() << setw(30) << "RM " << inventory.cookies[i].getPrice() << setw(18) << "RM " << inventory.cookies[i].getAvailableCount() * inventory.cookies[i].getPrice() << endl;
+        }
+    }
+
+    out << endl;
+
+    return out;
+}
+
 BuyerInventory::BuyerInventory()
 {
     fstream File("init.txt");
@@ -82,28 +109,4 @@ void BuyerInventory::addItem(int id, int count)
     {
         cakes[id].addAvailableCount(count);
     }
-}
-
-void BuyerInventory::printInventorySummary()
-{
-    cout << setw(30) << "Item" << setw(10) << "Count" << setw(33) << "Price Per Unit" << setw(21) << "Total Price" << endl;
-    for (int i = 0; i < 5; i++)
-    {
-        if (cakes[i].getAvailableCount() > 0)
-        {
-            cout << setw(30) << cakes[i].getItemName();
-            cout << setw(10) << cakes[i].getAvailableCount() << setw(30) << "RM " << cakes[i].getPrice() << setw(18) << "RM " << cakes[i].getAvailableCount() * cakes[i].getPrice() << endl;
-        }
-    }
-
-    for (int i = 0; i < 5; i++)
-    {
-        if (cookies[i].getAvailableCount() > 0)
-        {
-            cout << setw(30) << cookies[i].getItemName();
-            cout << setw(10) << cookies[i].getAvailableCount() << setw(30) << "RM " << cookies[i].getPrice() << setw(18) << "RM " << cookies[i].getAvailableCount() * cookies[i].getPrice() << endl;
-        }
-    }
-
-    cout << endl;
 }

@@ -22,14 +22,14 @@ public:
     Product();
     Product(float, float, int);
     void printProductInfo();
-    int getProductID();
-    string getItemName();
+    int getProductID() const;
+    string getItemName() const;
     void setItemName(string);
-    float getPrice();
+    float getPrice() const;
     void setPrice(float);
-    float getWeight();
+    float getWeight() const;
     void setWeight(float);
-    int getAvailableCount(); // would be use to update inventory
+    int getAvailableCount() const; // would be use to update inventory
     void setAvailableCount(int);
     void subAvailableCount(int);
     void addAvailableCount(int);

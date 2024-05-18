@@ -32,12 +32,12 @@ void Product::printProductInfo()
          << setw(18) << availableCount << endl;
 }
 
-int Product::getProductID()
+int Product::getProductID() const
 {
     return productID;
 }
 
-string Product::getItemName()
+string Product::getItemName() const
 {
     return itemName;
 }
@@ -47,7 +47,7 @@ void Product::setItemName(string n)
     itemName = n;
 }
 
-float Product::getPrice()
+float Product::getPrice() const
 {
     return price;
 }
@@ -57,7 +57,7 @@ void Product::setPrice(float p)
     price = p;
 }
 
-float Product::getWeight()
+float Product::getWeight() const
 {
     return weight;
 }
@@ -67,7 +67,7 @@ void Product::setWeight(float w)
     weight = w;
 }
 
-int Product::getAvailableCount()
+int Product::getAvailableCount() const
 {
     return availableCount;
 }

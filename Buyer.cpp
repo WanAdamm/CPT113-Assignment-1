@@ -34,7 +34,7 @@ void Buyer::buyItem(int id, int count, float price)
         cakeCount += count;
     }
     inventory.addItem(id, count); // add the item that have been bought to inventory
-    credit -= count * price; // subtract the credit after buying 
+    credit -= count * price;      // subtract the credit after buying
     moneySpent += count * price;
 }
 
@@ -62,7 +62,7 @@ void Buyer::printItemReceipt()
 {
     if (cakeCount + cookieCount > 0)
     {
-        inventory.printInventorySummary();
+        cout << inventory;
     }
     else
     {

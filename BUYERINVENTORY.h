@@ -15,7 +15,8 @@ public:
     BuyerInventory();
     void printItemAvailable();
     void addItem(int, int);
-    void printInventorySummary();
+
+    friend ostream &operator<<(ostream &out, const BuyerInventory &inventory);
 };
 
 #endif

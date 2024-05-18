@@ -98,13 +98,3 @@ int Shop::buyerItemCount()
 {
     return (buyer.getCakeCount() + buyer.getCookieCount());
 }
-
-void Shop::setDiscount(float d)
-{
-    discount = d;
-}
-
-float Shop::getDiscount()
-{
-    return discount;
-}
