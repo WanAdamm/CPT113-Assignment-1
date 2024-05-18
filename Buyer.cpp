@@ -43,26 +43,26 @@ void Buyer::printInventory()
     inventory.printItemAvailable();
 }
 
-float Buyer::getMoneySpent() const
+float Buyer::getMoneySpent() const //getter functionfor moneySpent
 {
     return moneySpent;
 }
 
-int Buyer::getCakeCount() const
+int Buyer::getCakeCount() const //getter function for cakeCount
 {
     return cakeCount;
 }
 
-int Buyer::getCookieCount() const
+int Buyer::getCookieCount() const //getter function for cookieCount
 {
     return cookieCount;
 }
 
 void Buyer::printItemReceipt()
 {
-    if (cakeCount + cookieCount > 0)
+    if (cakeCount + cookieCount > 0) // check if theres anything in buyer inventory
     {
-        cout << inventory;
+        cout << inventory; //using the friend overloaded operator to print receipt for buyer
     }
     else
     {

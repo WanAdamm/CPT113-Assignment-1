@@ -8,20 +8,20 @@ class Seller : public Account
 {
 
 private:
-    float revenue;
-    SellerInventory inventory;
+    float revenue; //  stores revenue
+    SellerInventory inventory; // inventory which stores item that a seller have
 
 public:
-    Seller();
-    Seller(float, string, int);
-    void printSellerInfo();
-    float getRevenue() const;
-    void addRevenue(float);
-    void subRevenue(float);
-    void printItemAvailable();
-    void sellItem(int, int);
-    float getItemPrice(int) const;
-    int getItemCount(int) const;
+    Seller(); // default constructor
+    Seller(float, string, int); // overloaded constructor
+    void printSellerInfo(); // function to print seller info
+    float getRevenue() const; // getter function for revenue
+    void addRevenue(float); // add to current revenue value
+    void subRevenue(float); // subtract from current revenue value
+    void printItemAvailable(); // print list of item available inside the seller inventory
+    void sellItem(int, int); // function to sell item from seller inventory
+    float getItemPrice(int) const; // getter function for item price of item inside seller inventory
+    int getItemCount(int) const; // getter function to get item count of item inside the inventory
 };
 
 #endif

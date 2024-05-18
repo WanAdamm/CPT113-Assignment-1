@@ -3,16 +3,16 @@
 
 #include "PRODUCT.h"
 
-class Cake : public Product
+class Cake : public Product // Cake is derived from Product
 {
 private:
-    static int cakeCount;
+    static int cakeCount; // keep track of how many cake instances there is in the program
 
 public:
-    Cake();
-    Cake(float, float, int);
-    ~Cake();
-    static int getCakeCount();
+    Cake(); // default constructor
+    Cake(float, float, int); // overloading constructor
+    ~Cake(); // destructor
+    static int getCakeCount(); // static getter function for static cakeCount 
 };
 
 #endif

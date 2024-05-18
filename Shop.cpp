@@ -14,17 +14,18 @@ Shop::Shop()
 
 Shop::Shop(string bName, string sName, float cred)
 {
-    buyer.setType(1);
-    seller.setType(2);
+    buyer.setType(1); // set the type of buyer to 1
+    seller.setType(2); // set the type of seller to 2 
 
-    buyer.setName(bName);
-    seller.setName(sName);
+    buyer.setName(bName); // set buyer name
+    seller.setName(sName); // set seller name
 
-    buyer.addCredit(cred);
+    buyer.addCredit(cred); // add credit to buyer account
 }
 
 void Shop::printReceipt()
 {
+    // print receipt after program has ended
     cout << "recipient: " << buyer.getName() << endl;
 
     buyer.printItemReceipt();
@@ -38,6 +39,7 @@ void Shop::printReceipt()
 
 void Shop::printMenu()
 {
+    // print the list of item sold by seller 
     cout << setw(45) << "| Welcome " << buyer.getName() << " |" << endl;
     cout << setw(30) << "Item" << setw(21) << "Price Per Unit" << setw(10) << "Weight" << setw(10) << "ID" << setw(20) << "Available Count" << endl;
     seller.printItemAvailable();
@@ -46,26 +48,27 @@ void Shop::printMenu()
 
 void Shop::printSellerInfo()
 {
+    // print the info about seller
     seller.printAccountInfo();
 }
 
 void Shop::buyItem(int id, int count)
 {
-    if (buyer.getCredit() < (seller.getItemPrice(id) * count))
+    if (buyer.getCredit() < (seller.getItemPrice(id) * count)) // check if buyer's credit is sufficient for item requested
     {
         cout << "Insufficient balance, add more credit to your account to proceed" << endl;
     }
     else
     {
-        if (seller.getItemCount(id) < count)
+        if (seller.getItemCount(id) < count) // check if theres enough item available from seller
         {
-            cout << "you've reached maximun number for this item" << endl;
+            cout << "you've reached maximum number for this item" << endl;
         }
         else
         {
-            seller.sellItem(id, count);                         // sellItem will deduct the item from seller inventory
+            seller.sellItem(id, count); // sellItem will deduct the item from seller inventory
             float price = seller.getItemPrice(id); // getItemPrice will get the price for item requested
-            buyer.buyItem(id, count, price);                    // passing the required information to buyer
+            buyer.buyItem(id, count, price); // passing the required information to buyer
 
             cout << "RM " << price * count << " has been deducted" << endl;
         }
@@ -76,12 +79,14 @@ void Shop::buyItem(int id, int count)
 
 void Shop::printBuyerCredit()
 {
+    // print credit that a buyer has
     cout << "Balance: RM " << buyer.getCredit() << endl
          << endl;
 }
 
 void Shop::addBuyerCredit(float cred)
 {
+    // add credit to buyer's account
     buyer.addCredit(cred);
     cout << "you've added RM" << cred << " to your account" << endl
          << endl;
@@ -89,10 +94,12 @@ void Shop::addBuyerCredit(float cred)
 
 void Shop::printBuyerInventory()
 {
+    // print item available in buyer's inventory
     buyer.printInventory();
 }
 
 int Shop::buyerItemCount()
 {
+    // return amount if item that a customer has bought for validation purposes
     return (buyer.getCakeCount() + buyer.getCookieCount());
 }
